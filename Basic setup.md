@@ -48,18 +48,16 @@ ln -s .bashrc .bash_profile
 echo "kern.vty='vt'" >> /boot/loader.conf
 ```
 
-
 ## Set Hungarian keyboard layout in terminal
 Print current config
 ```
 kbdmap -s
 ```
 
-Set up new config
+Set up new keyboard layout
 ```
 echo "keymap='hu.101.kbd'" >> /etc/rc.conf
 ```
-
 
 ## Graphical environment (openbox)
 
@@ -68,18 +66,24 @@ echo "dbus_enable='YES'" >> /etc/rc.conf
 echo "hald_enable='YES'" >> /etc/rc.conf
 echo "slim_enable='YES'" >> /etc/rc.conf
 
-pkg install xorg openbox slim tint2 obmenu obconf
-
+pkg install xorg openbox slim tint2 obmenu obconf lxterminal mate-terminal
 
 su - USERNAME
 mkdir -p .config/openbox
 cp /usr/local/etc/xdg/openbox/menu.xml ~/.config/openbox/menu.xml
 chmod 644 ~/.config/openbox/menu.xml
 echo "tint2 &" > .xinitrc
+echo "setxkbmap -model pc105 -layout hu -variant 102_qwerty_comma_dead &"
 echo "openbox" >> .xinitrc
 
 exit
+```
 
+
+
+
+
+```
 reboot
 ```
 
