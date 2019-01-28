@@ -66,7 +66,7 @@ echo "dbus_enable='YES'" >> /etc/rc.conf
 echo "hald_enable='YES'" >> /etc/rc.conf
 echo "slim_enable='YES'" >> /etc/rc.conf
 
-pkg install xorg openbox slim tint2 obmenu obconf lxterminal mate-terminal
+pkg install xorg openbox slim tint2 obmenu obconf lxterminal mate-terminal mate-desktop
 
 su - USERNAME
 mkdir -p .config/openbox
