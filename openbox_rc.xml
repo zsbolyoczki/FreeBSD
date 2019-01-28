@@ -1,0 +1,19 @@
+   <keybind key="A-F1">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Firefox</name>
+        </startupnotify>
+        <command>firefox</command>
+      </action>
+    </keybind>
+
+    <keybind key="A-F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>terminal</name>
+        </startupnotify>
+        <command>mate-terminal</command>
+      </action>
+    </keybind>
