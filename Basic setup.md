@@ -28,17 +28,19 @@ pkg install vim less bash sudo
 pw groupmod -n wheel USERNAME # to have su
 
 pw usermod -n root -s /usr/local/bin/bash
-echo "LC_ALL=en_US.UTF-8" >> /root/.bashrc
+echo "LC_ALL=en_US.UTF-8" > /root/.bashrc
 echo "export EDITOR=vim" >> /root/.bashrc
-echo "alias grep=\"grep --color\"" >> /root/.bashrc
-echo "alias egrep=\"egrep --color\"" >> /root/.bashrc
+echo "alias grep='grep --color'" >> /root/.bashrc
+echo "alias egrep='egrep --color'" >> /root/.bashrc
 echo "alias vi=vim" >> /root/.bashrc
+ln -s .bashrc .bash_profile
 
 pw usermod -n USERNAME -s /usr/local/bin/bash
 echo "LC_ALL=en_US.UTF-8" >> /home/USERNAME/.bashrc
 echo "export EDITOR=vim" >> /home/USERNAME/.bashrc
-echo "alias grep=\"grep --color\"" >> //home/USERNAME/.bashrc
-echo "alias egrep=\"egrep --color\"" >> //home/USERNAME/.bashr .*éá,
+echo "alias grep='grep --color'" >> //home/USERNAME/.bashrc
+echo "alias egrep='egrep --color'" >> //home/USERNAME/.bashrc
+ln -s .bashrc .bash_profile
 ```
 
 ## Set UTF8 support in console
