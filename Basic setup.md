@@ -4,7 +4,7 @@
 
 ## Decrease boot delay
 
-echo "autoboot_delay=\"1\"" >> /boot/loader.conf 
+echo "autoboot_delay='1'" >> /boot/loader.conf 
 
 
 ## Upgrade the packages
@@ -45,7 +45,7 @@ ln -s .bashrc .bash_profile
 
 ## Set UTF8 support in console
 ```
-echo "kern.vty=\"vt\"" >> /boot/loader.conf
+echo "kern.vty='vt'" >> /boot/loader.conf
 ```
 
 
@@ -57,16 +57,16 @@ kbdmap -s
 
 Set up new config
 ```
-echo "keymap=\"hu.101.kbd\"" >> /etc/rc.conf
+echo "keymap='hu.101.kbd'" >> /etc/rc.conf
 ```
 
 
 ## Graphical environment (openbox)
 
 ```
-echo "dbus_enable=\"YES\"" >> /etc/rc.conf
-echo "hald_enable=\"YES\"" >> /etc/rc.conf
-echo "slim_enable=\"YES\"" >> /etc/rc.conf
+echo "dbus_enable='YES'" >> /etc/rc.conf
+echo "hald_enable='YES'" >> /etc/rc.conf
+echo "slim_enable='YES'" >> /etc/rc.conf
 
 pkg install xorg openbox slim tint2 obmenu obconf
 
@@ -81,6 +81,5 @@ echo "openbox" >> .xinitrc
 exit
 
 reboot
-
 ```
 
