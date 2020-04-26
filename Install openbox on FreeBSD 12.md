@@ -21,7 +21,7 @@ pkg install xorg open-vm-tools # only necessary in case of a VM
 
 3. Install and set up openbox and related packages
 ```
-pkg install openbox slim tint2 obconf xbindkeys numlockx feh | tee /tmp/openbox.install.txt
+pkg install openbox slim tint2 obconf xbindkeys numlockx feh moused | tee /tmp/openbox.install.txt
 ```
 
 Check ``/tmp/openbox.install.txt`` for instructions to finish the installation.
@@ -37,6 +37,7 @@ sysrc ntpd_enable="YES"
 sysrc ntpd_sync_on_start="YES"
 sysrc dbus_enable="YES" 
 sysrc slim_enable="YES"
+sysrc moused_enable="YES"
 ```
 
 Add /proc to fstab:
@@ -54,3 +55,5 @@ pw groupmod wheel -m USERNAME
 ```
 reboot
 ```
+
+- It may be necessary to set screen resolution with ``xrandr`` and put it in the openbox autorun file.
