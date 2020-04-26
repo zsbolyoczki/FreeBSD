@@ -21,7 +21,7 @@ pkg install xorg open-vm-tools # only necessary in case of a VM
 
 3. Install and set up openbox and related packages
 ```
-pkg install openbox slim tint2 obconf | tee /tmp/openbox.install.txt
+pkg install openbox slim tint2 obconf xbindkeys numlockx feh | tee /tmp/openbox.install.txt
 ```
 
 Check ``/tmp/openbox.install.txt`` for instructions to finish the installation.
