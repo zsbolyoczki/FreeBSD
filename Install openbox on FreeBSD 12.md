@@ -28,7 +28,7 @@ Check ``/tmp/openbox.install.txt`` for instructions to finish the installation.
 
 Create .xinitrc for all users
 ```
-for h in $(ls -1d /home/*); do echo "openbox" >> ${h}/.xnitrc; chmod 644 ${h}/.xnitrc; done
+for h in $(ls -1d /home/*); do echo "openbox" >> ${h}/.xinitrc; chmod 644 ${h}/.xinitrc; done
 ```
 
 Add the following to /etc/rc.conf:
